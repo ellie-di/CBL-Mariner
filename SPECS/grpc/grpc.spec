@@ -93,7 +93,7 @@ pushd cmake/build
 %cmake_build 
 popd
 #uncommenting below line causes the whole build to get stuck in aarch64 machine 
-#py3_build
+%{__python3} setup.py build 
 
 %install
 pushd cmake/build
