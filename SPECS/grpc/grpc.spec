@@ -92,8 +92,9 @@ pushd cmake/build
    -DgRPC_ZLIB_PROVIDER:STRING='package'
 %cmake_build 
 popd
+
 #uncommenting below line causes the whole build to get stuck in aarch64 machine 
-%{__python3} setup.py build 
+%{__python3} setup.py build -j 1
 
 %install
 pushd cmake/build
